@@ -30,16 +30,23 @@ The script implements the following sed commands:
 ```
 Operating_System/
 ├── case_number.sh          # Main executable script ✅
-├── convert_case_number.sh  # Backup/alternate version
-├── input.txt               # Original input file (lowercase)
-├── output.txt              # Processed output file (uppercase, numbered)
-├── REPORT.md               # Comprehensive technical documentation
-└── README.MD               # This file
+├── input.txt               # Sample input file (lowercase text)
+└── README.MD               # Project documentation (this file)
 ```
+
+**Note**: After running the script, an `output.txt` file will be generated with the processed results.
 
 ---
 
-## 🚀 Quick Start
+## � GitHub Repository
+
+This project is available on GitHub:
+- **Repository**: https://github.com/Kishann911/Operating-System
+- **Clone**: `git clone https://github.com/Kishann911/Operating-System.git`
+
+---
+
+## �🚀 Quick Start
 
 ### Prerequisites
 
@@ -182,18 +189,24 @@ Prints pattern space (implicit in our script - sed outputs by default).
 
 ## 📊 Deliverables
 
-### ✅ Required Files
+### ✅ Repository Files
 
-1. **case_number.sh** - Main executable script
-2. **input.txt** - Sample input file
-3. **output.txt** - Generated output file
-4. **REPORT.md** - Comprehensive technical documentation
-5. **Screenshots** - Execution demonstrations
+1. **case_number.sh** - Main executable script with all 5 sed commands
+2. **input.txt** - Sample input file with test data
+3. **README.MD** - Complete project documentation (this file)
 
-### ✅ Documentation
+### 📝 Generated Files
 
-- **README.MD** (this file) - Project overview and usage guide
-- **REPORT.md** - Detailed command explanations, test results, and learning outcomes
+When you run the script, it will create:
+- **output.txt** - Processed output (uppercase text with line numbers)
+
+### 📚 Documentation
+
+This README includes:
+- Complete sed command explanations
+- Step-by-step usage instructions
+- Test cases and examples
+- Troubleshooting guide
 
 ---
 
@@ -311,10 +324,9 @@ sed --version
 
 ## 📖 Additional Resources
 
-- **REPORT.md** - Comprehensive technical documentation with detailed command explanations
-- [GNU Sed Manual](https://www.gnu.org/software/sed/manual/sed.html)
-- [Bash Scripting Guide](https://www.gnu.org/software/bash/manual/)
-- [Regular Expressions Tutorial](https://www.regular-expressions.info/)
+- [GNU Sed Manual](https://www.gnu.org/software/sed/manual/sed.html) - Official sed documentation
+- [Bash Scripting Guide](https://www.gnu.org/software/bash/manual/) - Comprehensive bash reference
+- [Regular Expressions Tutorial](https://www.regular-expressions.info/) - Learn regex patterns
 
 ---
 
