@@ -13,28 +13,37 @@ fi
 # a: Append marker at end of file
 
 sed = input.txt | sed '
-# Process pairs of lines (line number + content)
+# Read the next line so we have both the line number and the text together
 N
-# Apply transformations to the second line (content) only
-# First, save the line number (first line) to hold space
+
+# Save a copy of this pair to the "backup" storage
 h
-# Delete everything after newline (keep only line number)
+
+# Remove the text part, keeping only the line number
 s/\n.*//
-# Exchange hold and pattern space (now pattern has content, hold has line number)
+
+# Swap: bring the backup pair here, put the line number in "backup"
 x
-# Delete everything before newline (keep only content)
+
+# Remove the line number part, keeping only the text
 s/.*\n//
-# y: Convert lowercase to uppercase
+
+# Change all small letters to CAPITAL LETTERS
 y/abcdefghijklmnopqrstuvwxyz/ABCDEFGHIJKLMNOPQRSTUVWXYZ/
-# s: Replace keywords
+
+# Change "OPERATING SYSTEM" to just "OS"
 s/OPERATING SYSTEM/OS/g
-# Store transformed content in hold space
+
+# Add this changed text to the "backup" storage (merging with line number)
 H
-# Get both back (line number, then transformed content)
+
+# Bring everything back from "backup" to main view
 g
-# Format as "number : content"
+
+# Replace the newline between them with a " : " separator
 s/\n/ : /
-# $ a: Append marker at the end of file
+
+# If this is the last line, add a footer message below it
 $ a\
 ----- END OF FILE -----
 '
